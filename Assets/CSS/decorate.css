@@ -1,0 +1,92 @@
+body, html {
+  background-color: #FFFFFF; 
+  height: 100% 
+}
+
+
+/*Top part of website*/
+#caption {
+  padding-bottom: 80px; 
+}
+
+/*Style test navbar*/
+#navbar {
+  overflow: hidden;
+  background-color: #b4b4b4;
+  opacity: 0.5; 
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* Sticky class added to navbar with JS when it reaches its scroll position*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+
+
+/* Add top padding to page to prevent sudden quick movement*/
+.sticky + .content {
+  padding-top: 60px; 
+}
+
+
+/* Photo Positioning*/
+#one {
+  position: left; 
+}
+
+#two {
+  position: right;
+}
+
+.square {
+  width: 100px;
+  height: 100px; 
+}
+
+#info {
+  margin-left: 25px; 
+  padding-left: 25px; 
+  /*padding-right: 25px; */
+  /*margin-right: 25px; */
+
+}
+
+#p1 {
+  margin-left: 25px; 
+
+}
+
+/*my picture edits*/
+#lore{ 
+border-radius: 8px; 
+float: left; 
+padding-bottom: 30px; 
+padding-right: 10px; 
+ } 
+
+
+#story{
+  color: white; 
+}
+
+
+/* Languages div*/
+#lang {
+  padding-bottom: 50%; 
+}
