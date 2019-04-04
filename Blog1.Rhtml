@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>Travel Analysis</title>
+</head>
+
+<body>
+
+<h1>Tourism Analysis</h1> 
+
+<p>The following is a Time Series analysis of international inbound travel to Australia from May 1985 to April 2005. After preparing the dataset, forecasts were made to predict future tourism to the country.</p>
+
+<!--begin.rcode,message=FALSE, echo=FALSE, results='hide', message=FALSE, warning=FALSE
+
+setwd("C:\\Users\\loret\\Desktop\\UChicago MScA\\TimeSeries(MSCA31003)\\Session7\\Assignment6\\")
+
+# load dataset 
+load("visitors.rda")
+
+# load libraries 
+load.libraries = c("ggplot2","dplyr", "tseries", "TSA", "forecast")
+sapply(load.libraries, require, character=TRUE)
+
+end.rcode-->
+
+
+<h2>Time Series Plot</h2> 
+<p>The time series appears to display a multiplicative increasing trend. It also appears that the flow of visits is seasonal with spikes occuring regularily during certain months. 
+This makes sense because since most of the world follows the Gregorian calender, tourism should pick up during summer seasons. There is a noticible dip in overseas visits sometime in 2004 but for the most part, the number of overseas visitors traveling to Australia as tourists appears to increase over the 20 year period.</p> 
+<!--begin.rcode
+
+autoplot(visitors) + xlab("Year") + ylab("Monthly Australian Visitors")
+
+end.rcode-->
+
+
+<h2>Autocorrolation</h2>
+<p>The ACF plot shows that there is significant autocorrelation at multiple lags.</p>
+
+<!--begin.rcode fig.width=7, fig.height=6
+
+# ACF & PACF plots
+tsdisplay(visitors, main = "Monthly Australian Visitors")
+
+end.rcode-->
+
+
+
+<!--begin.rcode {echo = FALSE}
+rm(list = ls())
+dev.off()
+end.rcode-->
+
+</body>
+</html>
